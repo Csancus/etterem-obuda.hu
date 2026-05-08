@@ -8,6 +8,7 @@
 <meta name="keywords" content="étterem óbuda, vendéglő óbuda, harapó mókus, napi menü óbuda, házias konyha budapest, zápor utca étterem">
 <meta name="theme-color" content="#1f4a34">
 <link rel="canonical" href="https://www.etterem-obuda.hu/">
+<link rel="preload" as="image" href="/hero.webp" fetchpriority="high">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Harapó Mókus Vendéglő">
 <!-- Favicon -->
@@ -22,14 +23,16 @@
 <meta property="og:url" content="https://www.etterem-obuda.hu/">
 <meta property="og:title" content="Étterem Óbuda – Harapó Mókus | Magyar étterem III. kerület">
 <meta property="og:description" content="Étterem Óbuda – házias magyar fogások, napi menü, terasz, vegetáriánus opciók a Harapó Mókus Vendéglőben. 1032 Budapest, Zápor u. 69.">
-<meta property="og:image" content="https://www.etterem-obuda.hu/favicon.svg">
+<meta property="og:image" content="https://www.etterem-obuda.hu/hero.jpg">
+<meta property="og:image:width" content="668">
+<meta property="og:image:height" content="1000">
 <meta property="og:locale" content="hu_HU">
 <meta property="og:site_name" content="Harapó Mókus Vendéglő">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Étterem Óbuda – Harapó Mókus | Magyar étterem III. kerület">
 <meta name="twitter:description" content="Étterem Óbuda – házias magyar fogások, napi menü, terasz, vegetáriánus opciók a Harapó Mókus Vendéglőben.">
-<meta name="twitter:image" content="https://www.etterem-obuda.hu/favicon.svg">
+<meta name="twitter:image" content="https://www.etterem-obuda.hu/hero.jpg">
 <!-- JSON-LD: WebSite + Organization + Restaurant -->
 <script type="application/ld+json">
 {
@@ -118,7 +121,7 @@
     {"@type": "AdministrativeArea", "name": "Budapest III. kerület"},
     {"@type": "Place", "name": "Óbuda"}
   ],
-  "image": {"@type": "ImageObject", "url": "https://www.etterem-obuda.hu/favicon.svg"}
+  "image": {"@type": "ImageObject", "url": "https://www.etterem-obuda.hu/hero.jpg", "width": 668, "height": 1000}
     },
     {
       "@type": "ItemList",
@@ -344,6 +347,24 @@
     margin: 0 auto;
     padding: 0 5%;
     position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero-image {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(31,74,52,.18);
+    aspect-ratio: 668 / 1000;
+    max-width: 380px;
+    justify-self: end;
+    width: 100%;
+  }
+  .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-image { justify-self: center; max-width: 300px; }
   }
   .hero-eyebrow {
     display: inline-block;
@@ -924,16 +945,32 @@
 ════════════════════════════════════════════ -->
 <section class="hero" aria-labelledby="hero-h1">
   <div class="hero-inner">
-    <span class="hero-eyebrow">Házias konyha · Óbuda · Zápor utca</span>
-    <h1 id="hero-h1">Étterem Óbuda <br>Harapó Mókus</h1>
-    <p class="hero-subtitle">Igazi hazai ízek, barátságos árak – az óbudai kertek között.</p>
-    <div class="hero-ctas">
-      <a href="tel:+3613886151" class="btn btn-primary">
-        &#9742;&nbsp; Asztalt foglalok
-      </a>
-      <a href="https://harapomokus.hu/kinalatunk/etlap.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-        Étlap megtekintése &rarr;
-      </a>
+    <div>
+      <span class="hero-eyebrow">Házias konyha · Óbuda · Zápor utca</span>
+      <h1 id="hero-h1">Étterem Óbuda <br>Harapó Mókus</h1>
+      <p class="hero-subtitle">Igazi hazai ízek, barátságos árak – az óbudai kertek között.</p>
+      <div class="hero-ctas">
+        <a href="tel:+3613886151" class="btn btn-primary">
+          &#9742;&nbsp; Asztalt foglalok
+        </a>
+        <a href="https://harapomokus.hu/kinalatunk/etlap.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          Étlap megtekintése &rarr;
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <picture>
+        <source srcset="/hero.webp" type="image/webp">
+        <img
+          src="/hero.jpg"
+          alt="Étterem Óbuda – Harapó Mókus Vendéglő, házias magyar fogások a Zápor utcán"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          width="668"
+          height="1000"
+        />
+      </picture>
     </div>
   </div>
 </section>
