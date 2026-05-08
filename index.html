@@ -854,11 +854,19 @@
       z-index: 200;
       gap: 0;
     }
+    .nav-toggle:checked ~ .nav-links li { width: 100%; list-style: none; }
     .nav-toggle:checked ~ .nav-links a {
-      padding: 14px 22px;
+      padding: 14px 22px !important;
       width: 100%;
-      min-height: auto;
+      font-size: 1rem;
+      color: var(--p) !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      font-weight: 500;
+      min-height: 48px;
+      justify-content: flex-start;
     }
+    .nav-toggle:checked ~ .nav-links a:hover { background: var(--bg) !important; color: var(--a) !important; }
     .hero { padding: 68px 0 60px; }
     .about-grid { grid-template-columns: 1fr; gap: 28px; }
     .about-heading { grid-column: 1; }
