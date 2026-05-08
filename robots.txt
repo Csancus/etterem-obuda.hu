@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://etterem-obuda.hu/sitemap.xml
+Sitemap: https://www.etterem-obuda.hu/sitemap.xml
