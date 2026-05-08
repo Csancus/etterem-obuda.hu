@@ -71,7 +71,8 @@
       "email": "vendeglo@harapomokus.hu",
       "sameAs": [
         "https://www.facebook.com/harapomokusvendeglo/",
-        "https://harapomokus.hu/"
+        "https://harapomokus.hu/",
+        "https://www.google.com/maps/place/Harap%C3%B3+M%C3%B3kus+Vend%C3%A9gl%C5%91/@47.548645,19.0396551,17z/data=!4m6!3m5!1s0x4741d968215960b7:0xf293ff4b298d9891!8m2!3d47.5423603!4d19.0352577!16s%2Fg%2F1tfs9m8z"
       ]
     },
     {
@@ -837,6 +838,29 @@
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   }
+
+  .google-review-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 22px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    margin-top: 14px;
+    box-shadow: var(--shadow-card);
+    transition: all .2s ease;
+  }
+  .google-review-banner:hover {
+    border-color: var(--a);
+    transform: translateY(-1px);
+  }
+  .grb-stars { color: #f4a800; letter-spacing: 1.5px; font-size: 1rem; }
+  .grb-rating { font-weight: 800; color: var(--p); }
+  .grb-text { color: var(--text-muted); }
+  .grb-arrow { color: var(--a); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -1023,6 +1047,12 @@
       <div class="section-label">Vendégvélemények</div>
       <h2 class="section-title" id="reviews-title">Vélemények az óbudai éttermünkről</h2>
       <p class="section-desc" style="margin:0 auto;">Valódi visszajelzések valódi vendégektől – mert a legjobb reklám az elégedett vendég.</p>
+      <a href="https://www.google.com/maps/place/Harap%C3%B3+M%C3%B3kus+Vend%C3%A9gl%C5%91/@47.548645,19.0396551,17z/data=!4m6!3m5!1s0x4741d968215960b7:0xf293ff4b298d9891!8m2!3d47.5423603!4d19.0352577!16s%2Fg%2F1tfs9m8z" target="_blank" rel="noopener" class="google-review-banner" aria-label="Harapó Mókus Google vélemények">
+        <span class="grb-stars">★★★★★</span>
+        <span class="grb-rating">4.7</span>
+        <span class="grb-text">· 2630 vélemény Google-ön</span>
+        <span class="grb-arrow">→</span>
+      </a>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
