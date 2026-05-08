@@ -832,6 +832,7 @@
 
   .nav-toggle:checked ~ .nav-hamburger { background: var(--bg); }
   .nav-link-phone { color: var(--a) !important; font-weight: 700 !important; }
+  .nav-hamburger { order: 99; }
   .nav-toggle:checked ~ .nav-links {
     display: none;
   }
@@ -839,8 +840,8 @@
   /* ── Mobile ── */
   @media (max-width: 768px) {
     .nav-links,
-    .nav-phone { display: none; }
-    .nav-hamburger { display: flex; cursor: pointer; order: 99; }
+    .nav-phone { display: none !important; }
+    .nav-hamburger { display: flex; cursor: pointer; }
     .nav-toggle:checked ~ .nav-links {
       display: flex !important;
       flex-direction: column;
