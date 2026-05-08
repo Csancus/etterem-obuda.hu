@@ -831,23 +831,16 @@
   .footer-legal a:hover { color: rgba(255,255,255,0.72); }
 
   .nav-toggle:checked ~ .nav-hamburger { background: var(--bg); }
+  .nav-link-phone { color: var(--a) !important; font-weight: 700 !important; }
   .nav-toggle:checked ~ .nav-links {
     display: none;
   }
 
   /* ── Mobile ── */
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-links,
+    .nav-phone { display: none; }
     .nav-hamburger { display: flex; cursor: pointer; order: 99; }
-    .nav-phone a {
-      background: transparent !important;
-      color: var(--a) !important;
-      padding: 6px 8px !important;
-      font-size: 0.92rem !important;
-      box-shadow: none !important;
-      transform: none !important;
-      letter-spacing: 0 !important;
-    }
     .nav-toggle:checked ~ .nav-links {
       display: flex !important;
       flex-direction: column;
@@ -938,6 +931,7 @@
       <li><a href="#velemenyek">Vélemények</a></li>
       <li><a href="#faq">GYIK</a></li>
       <li><a href="#kapcsolat">Kapcsolat</a></li>
+      <li><a href="tel:+3613886151" class="nav-link-phone">&#9742; +36 1 388-6151</a></li>
     </ul>
     <div class="nav-phone">
       <a href="tel:+3613886151" aria-label="Hívjon most: +36 1 388-6151">
