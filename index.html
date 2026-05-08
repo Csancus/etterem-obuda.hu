@@ -837,9 +837,17 @@
 
   /* ── Mobile ── */
   @media (max-width: 768px) {
-    .nav-links,
-    .nav-phone { display: none; }
+    .nav-links { display: none; }
     .nav-hamburger { display: flex; cursor: pointer; }
+    .nav-phone a {
+      background: transparent !important;
+      color: var(--a) !important;
+      padding: 6px 8px !important;
+      font-size: 0.92rem !important;
+      box-shadow: none !important;
+      transform: none !important;
+      letter-spacing: 0 !important;
+    }
     .nav-toggle:checked ~ .nav-links {
       display: flex !important;
       flex-direction: column;
