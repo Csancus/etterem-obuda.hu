@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "etterem-obuda.hu" }],
+      "destination": "https://www.etterem-obuda.hu/:path*",
+      "permanent": true
+    }
+  ]
+}
